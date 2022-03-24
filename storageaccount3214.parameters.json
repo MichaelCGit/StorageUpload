@@ -8,11 +8,11 @@
     "location": {
       "value": "UKSouth"
     },
-    "resourceTags": {
-      "value": {
-        "Product": "Luware Recording",
-        "Stage": "PROD",
-        "Location": "CHNO"
+    {
+ "resourceTags":{
+    "value": "Production"
+  }
+}
       }
     },
     "StorageAccountType": {
