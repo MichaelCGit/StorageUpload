@@ -11,8 +11,7 @@
     
  "resourceTags":{
     "value": "Production"
-  }
-}
+   
       }
     },
     "StorageAccountType": {
