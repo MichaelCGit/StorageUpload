@@ -8,11 +8,8 @@
     "location": {
       "value": "UKSouth"
     },
-    
- "resourceTags":{
-    "value": "Production"
-   
-      }
+    "envValue": {
+      "value": "Dev"
     },
     "StorageAccountType": {
       "value": "Standard_LRS"
