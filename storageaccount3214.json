@@ -1,0 +1,134 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+        "type": "string",
+		"defaultValue": "storageaccount3214",
+        "metadata": {
+            "description": "Name of the storage account"
+        }
+        },
+        "location": {
+            "type": "string",
+			"defaultValue": "UKSouth",
+            "allowedValues": [
+            "SwitzerlandNorth",
+            "UKSouth",
+            "NorthEurope",
+            "WestEurope"],
+            "metadata": {
+                "description": "Location of the storage account"
+            }
+        },
+
+		 "resourceTags": {
+       "type": "object",
+       "defaultValue": {
+           "Product": "Luware Recording",
+           "Stage": "PROD",
+           "Location": "CHNO"
+
+       }
+		 },
+
+        "StorageAccountType": {
+            "type": "string",
+			"defaultValue": "Standard_LRS",
+            "allowedValues": [
+            "Standard_LRS",
+            "Standard_GRS",
+            "Standard_RAGRS",
+            "Standard_ZRS"],
+            "metadata": {
+                "description": "The storage account type"
+
+        }
+
+    }
+
+    },
+
+    
+    "resources": [{
+        "name": "[parameters('storageAccountName')]",
+        "type": "Microsoft.Storage/storageAccounts",
+        "apiVersion": "2021-04-01",
+        "location": "[parameters('location')]",
+       "sku": {
+                "name": "[parameters('StorageAccountType')]",
+				"tags": "[parameters('resourceTags')]",
+                "tier": "Standard"
+            },
+            "kind": "StorageV2",
+            "properties": {
+                "defaultToOAuthAuthentication": false,
+                "allowCrossTenantReplication": true,
+                "minimumTlsVersion": "TLS1_2",
+                "allowBlobPublicAccess": true,
+                "allowSharedKeyAccess": true,
+                "networkAcls": {
+                    "resourceAccessRules": [],
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [
+                        {
+                            "value": "51.107.87.18",
+                            "action": "Allow"
+                        },
+                        {
+                            "value": "51.107.91.113",
+                            "action": "Allow"
+                        },
+                        {
+                            "value": "51.107.96.21",
+                            "action": "Allow"
+                        },
+                        {
+                            "value": "51.107.3.111",
+                            "action": "Allow"
+                        },
+                        {
+                            "value": "51.107.43.234",
+                            "action": "Allow"
+                        },
+                        {
+                            "value": "51.107.44.2",
+                            "action": "Allow"
+                        },
+                        {
+                            "value": "51.107.101.221",
+                            "action": "Allow"
+                        },
+                        {
+                            "value": "51.107.96.26",
+                            "action": "Allow"
+                        },
+                        {
+                            "value": "31.132.8.8",
+                            "action": "Allow"
+                        }
+                    ],
+                    "defaultAction": "Deny"
+                },
+                "supportsHttpsTrafficOnly": true,
+                "encryption": {
+                    "requireInfrastructureEncryption": false,
+                    "services": {
+                        "file": {
+                            "keyType": "Account",
+                            "enabled": true
+                        },
+                        "blob": {
+                            "keyType": "Account",
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "accessTier": "Hot"
+         
+            }
+    }
+    ]
+        }
