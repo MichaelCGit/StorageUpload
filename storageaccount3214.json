@@ -19,17 +19,18 @@
             "WestEurope"],
             "metadata": {
                 "description": "Location of the storage account"
-            }
-        },
-
-		 "resourceTags": {
-       "type": "object",
-       "defaultValue": {
-           "Product": "Luware Recording",
-           "Stage": "PROD",
-           "Location": "CHNO"
 
        }
+		 },
+
+		 "envValue": {
+			 "type": "string",
+			 "metadata": {
+				 "displayName": "Tag Value",
+				 "description": "Deployment Environment of the resource"
+			 },
+			 "defaultValue": "Dev"
+
 		 },
 
         "StorageAccountType": {
