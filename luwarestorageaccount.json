@@ -4,7 +4,7 @@
     "parameters": {
         "storageAccountName": {
         "type": "string",
-		"defaultValue": "storageaccount30001",
+		"defaultValue": "luwarestorage",
         "metadata": {
             "description": "Name of the storage account"
         }
