@@ -6,10 +6,7 @@
       "value": "storageaccount3214"
     },
     "location": {
-      "value": "UKSouth"
-    },
-    "envValue": {
-      "value": "Dev"
+      "value": "SwitzerlandNorth"
     },
     "StorageAccountType": {
       "value": "Standard_LRS"
