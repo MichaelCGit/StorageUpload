@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "storageAccountName": {
-      "value": "luwarestorage1"
+      "value": "luwarestorage123"
     },
     "location": {
       "value": "SwitzerlandNorth"
