@@ -19,10 +19,10 @@ steps:
     resourceGroupName: 'StorageAccount123'
     location: 'UK South'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/MichaelCGit/StorageUpload/main/storageaccount3001.json'
-    csmParametersFileLink: 'https://raw.githubusercontent.com/MichaelCGit/StorageUpload/main/storageaccount3001.parameters.json'
+    csmFileLink: 'https://raw.githubusercontent.com/MichaelCGit/StorageUpload/main/luwarestorageaccount.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/MichaelCGit/StorageUpload/main/luwarestorageaccount.parameters.json'
     deploymentMode: 'Complete'
-    deploymentName: 'storageaccount3214'
+    deploymentName: 'luwarestorageaccount'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
