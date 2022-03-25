@@ -19,8 +19,8 @@ steps:
     resourceGroupName: 'StorageAccount123'
     location: 'UK South'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/MichaelCGit/StorageUpload/main/storageaccount3214.json'
-    csmParametersFileLink: 'https://raw.githubusercontent.com/MichaelCGit/StorageUpload/main/storageaccount3214.parameters.json'
+    csmFileLink: 'https://raw.githubusercontent.com/MichaelCGit/StorageUpload/main/storageaccount3001.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/MichaelCGit/StorageUpload/main/storageaccount3001.parameters.json'
     deploymentMode: 'Complete'
     deploymentName: 'storageaccount3214'
 
