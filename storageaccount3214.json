@@ -11,7 +11,7 @@
         },
         "location": {
             "type": "string",
-			"defaultValue": "UKSouth",
+			"defaultValue": "SwitzerlandNorth",
             "allowedValues": [
             "SwitzerlandNorth",
             "UKSouth",
@@ -19,19 +19,8 @@
             "WestEurope"],
             "metadata": {
                 "description": "Location of the storage account"
-
-       }
-		 },
-
-		 "envValue": {
-			 "type": "string",
-			 "metadata": {
-				 "displayName": "Tag Value",
-				 "description": "Deployment Environment of the resource"
-			 },
-			 "defaultValue": "Dev"
-
-		 },
+            }
+        },
 
         "StorageAccountType": {
             "type": "string",
@@ -58,7 +47,6 @@
         "location": "[parameters('location')]",
        "sku": {
                 "name": "[parameters('StorageAccountType')]",
-				"tags": "[parameters('resourceTags')]",
                 "tier": "Standard"
             },
             "kind": "StorageV2",
