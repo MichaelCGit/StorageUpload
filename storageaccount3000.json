@@ -4,7 +4,7 @@
     "parameters": {
         "storageAccountName": {
         "type": "string",
-		"defaultValue": "storageaccount3124",
+		"defaultValue": "storageaccount3000",
         "metadata": {
             "description": "Name of the storage account"
         }
